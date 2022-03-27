@@ -62,7 +62,7 @@ async function doWork() {
   }
 
   const sortedLogs = sortCommitLogs(commitLogs);
-  const reporter = getReporter(argv.reporter);
+  const reporter = getReporter(argv.format);
 
   console.log(await reporter(sortedLogs));
 }
