@@ -23,9 +23,10 @@ const argvPromise = yargs(process.argv.slice(2))
     desc: 'Email of the commit\'s author',
     default: process.env.GIT_AUTHOR,
   })
-  .positional('reporter', {
+  .positional('format', {
     type: 'string',
-    desc: 'Reporter to use',
+    desc: 'Format to use for the report',
+    alias: 'reporter',
     default: ReporterTypes.CSV,
     choices: Object.values(ReporterTypes),
   })
