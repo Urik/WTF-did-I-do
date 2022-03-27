@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "sourceMap": true,
+    "module": "CommonJS",
+
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "buildOptions": {"incremental": true}
+}
