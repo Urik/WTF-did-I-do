@@ -6,7 +6,26 @@ import { findGitRepos } from './pathTool';
 import { ReporterTypes, getReporter } from './reporters';
 import { CommitLog } from './types/CommitLog';
 
-const argvPromise = yargs(process.argv.slice(2))
+function sortCommitLogs(commitLogs: CommitLog[]): CommitLog[] {
+  return commitLogs.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+
+    const areSameDay =
+      dateA.getUTCFullYear() === dateB.getUTCFullYear() &&
+      dateA.getUTCMonth() === dateB.getUTCMonth() &&
+      dateA.getUTCDate() === dateB.getUTCDate();
+
+    if (!areSameDay) {
+      return dateA.getTime() - dateB.getTime();
+    }
+
+    return a.repository.localeCompare(a.repository);
+  });
+}
+
+async function doWork() {
+  const argv = await yargs(process.argv.slice(2))
   .usage('Usage: $0 -w [num] -h [num]')
   .positional('from', {
     type: 'string',
@@ -34,27 +53,6 @@ const argvPromise = yargs(process.argv.slice(2))
   .demandOption('author', 'Specify for whom you want to see the commits')
   .help().argv;
 
-function sortCommitLogs(commitLogs: CommitLog[]): CommitLog[] {
-  return commitLogs.sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-
-    const areSameDay =
-      dateA.getUTCFullYear() === dateB.getUTCFullYear() &&
-      dateA.getUTCMonth() === dateB.getUTCMonth() &&
-      dateA.getUTCDate() === dateB.getUTCDate();
-
-    if (!areSameDay) {
-      return dateA.getTime() - dateB.getTime();
-    }
-
-    return a.repository.localeCompare(a.repository);
-  });
-}
-
-async function doWork() {
-  const argv = await argvPromise;
-  argv.until
   const gitReposPaths = await findGitRepos(process.cwd());
   const commitLogs: CommitLog[] = [];
   for (const gitRepoPath of gitReposPaths) {
