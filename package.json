@@ -1,6 +1,6 @@
 {
   "name": "wtf-did-i-do",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "",
   "main": "dist/index.js",
   "bin": {
@@ -15,12 +15,12 @@
   "author": "Uri Ezequiel Berman Kleiner",
   "license": "MIT",
   "dependencies": {
-    "fast-csv": "^4.3.6",
-    "simple-git": "^3.4.0",
-    "yargs": "^17.4.0"
+    "fast-csv": "4.x",
+    "simple-git": "3.x",
+    "yargs": "17.x"
   },
   "devDependencies": {
-    "@types/yargs": "^17.0.10",
-    "typescript": "^4.6.3"
+    "@types/yargs": "17.x",
+    "typescript": "4.x"
   }
 }
