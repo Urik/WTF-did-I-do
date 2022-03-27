@@ -31,6 +31,7 @@ const argvPromise = yargs(process.argv.slice(2))
     choices: Object.values(ReporterTypes),
   })
   .demandOption('from', 'Specify when you want to start looking for commits from')
+  .demandOption('author', 'Specify for whom you want to see the commits')
   .help().argv;
 
 function sortCommitLogs(commitLogs: CommitLog[]): CommitLog[] {
