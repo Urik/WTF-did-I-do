@@ -9,9 +9,10 @@
   "scripts": {
     "dev": "npm run compile && node dist/index.js",
     "compile": "tsc",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Uri Ezequiel Berman Kleiner",
   "license": "MIT",
   "dependencies": {
     "fast-csv": "^4.3.6",
