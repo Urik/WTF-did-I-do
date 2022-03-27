@@ -27,11 +27,11 @@ The options supported by WTF Did I Do are:
 ### CSV
 ```
 date,author,repository,message,body
-2022-03-27T12:22:48-04:00,uribk@unito.io,/home/uri/WTF-did-I-do,Sample message 2,"Sample body 2
+2022-03-27T12:22:48-04:00,elvispresley@spies.com,/home/uri/WTF-did-I-do,Sample message 2,"Sample body 2
 "
-2022-03-27T12:22:36-04:00,uribk@unito.io,/home/uri/WTF-did-I-do,Sample message 1,"Sample Body 1
+2022-03-27T12:22:36-04:00,elvispresley@spies.com,/home/uri/WTF-did-I-do,Sample message 1,"Sample Body 1
 "
-2022-03-27T12:20:29-04:00,uribk@unito.io,/home/uri/WTF-did-I-do,improved documentation,
+2022-03-27T12:20:29-04:00,elvispresley@spies.com,/home/uri/WTF-did-I-do,improved documentation,
 ```
 
 ### JSON
@@ -39,21 +39,21 @@ date,author,repository,message,body
 [
   {
     "date": "2022-03-27T12:22:48-04:00",
-    "author": "uribk@unito.io",
+    "author": "elvispresley@spies.com",
     "repository": "/home/uri/WTF-did-I-do",
     "message": "Sample message 2",
     "body": "Sample body 2\n"
   },
   {
     "date": "2022-03-27T12:22:36-04:00",
-    "author": "uribk@unito.io",
+    "author": "elvispresley@spies.com",
     "repository": "/home/uri/WTF-did-I-do",
     "message": "Sample message 1",
     "body": "Sample Body 1\n"
   },
   {
     "date": "2022-03-27T12:20:29-04:00",
-    "author": "uribk@unito.io",
+    "author": "elvispresley@spies.com",
     "repository": "/home/uri/WTF-did-I-do",
     "message": "improved documentation",
     "body": ""
@@ -65,7 +65,7 @@ date,author,repository,message,body
 ### Human
 ```
 Date: 2022-03-27, 12:22:48 p.m.
-Author: uribk@unito.io
+Author: elvispresley@spies.com
 Repository: /home/uri/WTF-did-I-do
 Message: Sample message 2
 
@@ -76,7 +76,7 @@ Sample body 2
 ========================================================================
 
 Date: 2022-03-27, 12:22:36 p.m.
-Author: uribk@unito.io
+Author: elvispresley@spies.com
 Repository: /home/uri/WTF-did-I-do
 Message: Sample message 1
 
@@ -87,7 +87,7 @@ Sample Body 1
 ========================================================================
 
 Date: 2022-03-27, 12:20:29 p.m.
-Author: uribk@unito.io
+Author: elvispresley@spies.com
 Repository: /home/uri/WTF-did-I-do
 Message: improved documentation
 
