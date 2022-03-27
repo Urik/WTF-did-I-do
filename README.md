@@ -13,7 +13,7 @@ The only mandatory options you should provide are `--from <year-month-date>` and
 Output will be sent to standard output, which can be sent to a file as `npx wtf-did-i-do --from 2022-01-01 --author elvispresley@spies.com --format json > output.json`
 
 ## Options
-The potential options supported by WTF Did I Do are:
+The options supported by WTF Did I Do are:
 
 | Option | Description | Accepted Values |
 | -------| ----------- | --------------- |
