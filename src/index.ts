@@ -32,6 +32,24 @@ const argvPromise = yargs(process.argv.slice(2))
   .demandOption('from', 'Specify when you want to start looking for commits from')
   .help().argv;
 
+function sortCommitLogs(commitLogs: CommitLog[]): CommitLog[] {
+  return commitLogs.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+
+    const areSameDay =
+      dateA.getUTCFullYear() === dateB.getUTCFullYear() &&
+      dateA.getUTCMonth() === dateB.getUTCMonth() &&
+      dateA.getUTCDate() === dateB.getUTCDate();
+
+    if (!areSameDay) {
+      return dateA.getTime() - dateB.getTime();
+    }
+
+    return a.repository.localeCompare(a.repository);
+  });
+}
+
 async function doWork() {
   const argv = await argvPromise;
   argv.until
@@ -41,7 +59,8 @@ async function doWork() {
     const commitsLogs = await getCommits(new Date(argv.from), new Date(argv.until), argv.author, gitRepoPath);
     commitLogs.push(...commitsLogs);
   }
-  const sortedLogs = commitLogs.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+  const sortedLogs = sortCommitLogs(commitLogs);
   const reporter = getReporter(argv.reporter);
 
   console.log(await reporter(sortedLogs));
