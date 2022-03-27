@@ -10,11 +10,11 @@ export async function getCommits(fromDate: Date, toDate: Date, author: string, p
     ]);
 
     return logs.all.map(log => ({
-      body: log.body,
       date: log.date,
-      message: log.message,
+      author: log.author_email,
       repository: path,
-      author: log.author_email
+      message: log.message,
+      body: log.body,
     }));
   } catch (err) {
     console.error(err);
