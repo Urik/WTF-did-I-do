@@ -18,4 +18,4 @@ The potential options supported by WTF Did I Do are:
 | from   | When to start looking for commits. Formatted in ISO 8061 or year-month-date format | 2022-01-01 or 2022-01-01T00:00:00.0000Z |
 | until  | When to stop looking for commits.  Formatted in ISO 8061 or year-month-date format | 2022-01-10 or 2022-01-10T00:00:00.0000Z |
 | author | Email of the user for whom we are looking for commits | |
-| format | Format to use for the report | `csv | json | human` | 
+| format | Format to use for the report | `csv` \| `json` \| `human` | 
