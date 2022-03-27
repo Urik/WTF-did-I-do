@@ -1,13 +1,13 @@
 # WTF Did I Do?
-WTF Did I Do is a tool for scatterbrained developers who need to know what they have been working on, but don't.
+WTF Did I Do is a tool for scatterbrained developers who need to know what they have been working on, but don't.  
 WTF Did I Do will traverse a user's git repositories and compile an ordered list of commits the developer has done over a specific timeframe so they can keep better track of their commits.
 
 ## Why?
 True, you *could* run `git log` yourself, but this will do it across several projects for you, compiling a date-project ordered list in different formats for your own use in either csv, json or human readable formats.
 
 ## Usage
-You need `npm` and `node` for this to work. 
-After these are installed all you have to do is run `npx wtf-did-i-do` and the script will recursively all sub-folders of the folder you executed the script on, and compile the necessary commits.
+You need `npm` and `node` for this to work.   
+After these are installed all you have to do is run `npx wtf-did-i-do` and the script will recursively all sub-folders of the folder you executed the script on, and compile the necessary commits.  
 The only mandatory options you should provide are `--from <year-month-date>` and `--author <email>`.
 
 Output will be sent to standard output, which can be sent to a file as `npx wtf-did-i-do --from 2022-01-01 --author elvispresley@spies.com --format json > output.json`
