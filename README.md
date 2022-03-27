@@ -3,7 +3,7 @@ WTF Did I Do is a tool for scatterbrained developers who need to know what they 
 WTF Did I Do will traverse a user's git repositories and compile an ordered list of commits the developer has done over a specific timeframe so they can keep better track of their commits.
 
 ## Why?
-True, you *could* run `git log` yourself, but this will do it across several projects for you, compiling an date-project ordered list in different formats for your own use in either csv, json or human readable formats.
+True, you *could* run `git log` yourself, but this will do it across several projects for you, compiling a date-project ordered list in different formats for your own use in either csv, json or human readable formats.
 
 ## Usage
 You need `npm` and `node` for this to work. 
