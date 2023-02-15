@@ -7,7 +7,7 @@ True, you *could* run `git log` yourself, but this will do it across several pro
 
 ## Usage
 You need `npm` and `node` for this to work.   
-After these are installed all you have to do is run `npx wtf-did-i-do` and the script will recursively all sub-folders of the folder you executed the script on, and compile the necessary commits.  
+After these are installed all you have to do is run `npx wtf-did-i-do` and the script will recursively inspect all sub-folders of the folder you executed the script on, and compile the necessary commits.  
 The only mandatory options you should provide are `--from <year-month-date>` and `--author <email>`.
 
 Output will be sent to standard output, which can be sent to a file as `npx wtf-did-i-do --from 2022-01-01 --author elvispresley@spies.com --format json > output.json`
